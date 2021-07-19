@@ -6,13 +6,15 @@ import { SignIn } from "../screens/SignIn";
 
 const { Navigator, Screen } = createStackNavigator();
 
+import {theme} from "../global/styles/themes";
+
 export function AuthRoutes() {
     return (
         <Navigator
             headerMode="none"
             screenOptions={{
                 cardStyle: {
-                    backgroundColor: "transparent"
+                    backgroundColor: theme.colors.secondary100
                 }
             }}
         >
