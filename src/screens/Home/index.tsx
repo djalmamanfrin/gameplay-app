@@ -10,9 +10,12 @@ import { ListDivider } from '../../components/ListDivider';
 import { Profile } from '../../components/Profile';
 
 import { styles } from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
 export function Home() {
     const [category, setCategory] = useState('');
+    const navegation = useNavigation();
+
     const appointments = [
         {
             id: '1',
@@ -43,6 +46,10 @@ export function Home() {
         categoryId === category ? setCategory('') : setCategory(categoryId);
 
     }
+    function handleAppointmentDetail() {
+        navegation.navigate('AppointmentDetails');
+
+    }
     return (
         <Background>
             <View style={styles.header}>
@@ -69,7 +76,10 @@ export function Home() {
                     data={appointments}
                     keyExtractor={item => item.id}
                     renderItem={ ({item}) => (
-                        <Appointment data={item} />
+                        <Appointment
+                            data={item}
+                            onPress={handleAppointmentDetail}
+                        />
                     )}
                 />
             </View>
