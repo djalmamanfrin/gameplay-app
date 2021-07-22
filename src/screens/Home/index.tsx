@@ -46,15 +46,19 @@ export function Home() {
         categoryId === category ? setCategory('') : setCategory(categoryId);
 
     }
-    function handleAppointmentDetail() {
+    function handleAppointmentDetails() {
         navegation.navigate('AppointmentDetails');
+
+    }
+    function handleAppointmentCreate() {
+        navegation.navigate('AppointmentCreate');
 
     }
     return (
         <Background>
             <View style={styles.header}>
                 <Profile/>
-                <ButtonAdd/>
+                <ButtonAdd onPress={handleAppointmentCreate}/>
             </View>
 
             <View>
@@ -78,7 +82,7 @@ export function Home() {
                     renderItem={ ({item}) => (
                         <Appointment
                             data={item}
-                            onPress={handleAppointmentDetail}
+                            onPress={handleAppointmentDetails}
                         />
                     )}
                 />
