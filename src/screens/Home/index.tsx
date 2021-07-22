@@ -14,7 +14,7 @@ import { useNavigation } from "@react-navigation/native";
 
 export function Home() {
     const [category, setCategory] = useState('');
-    const navegation = useNavigation();
+    const navigation = useNavigation();
 
     const appointments = [
         {
@@ -47,11 +47,11 @@ export function Home() {
 
     }
     function handleAppointmentDetails() {
-        navegation.navigate('AppointmentDetails');
+        navigation.navigate('AppointmentDetails');
 
     }
     function handleAppointmentCreate() {
-        navegation.navigate('AppointmentCreate');
+        navigation.navigate('AppointmentCreate');
 
     }
     return (
@@ -68,25 +68,24 @@ export function Home() {
                 />
             </View>
 
-            <View style={styles.content}>
-                <ListHeader
-                    title="Partidas Agendadas"
-                    subtitle="Total 6"
-                />
-                <FlatList
-                    style={styles.matches}
-                    showsHorizontalScrollIndicator={false}
-                    ItemSeparatorComponent={() => <ListDivider/>}
-                    data={appointments}
-                    keyExtractor={item => item.id}
-                    renderItem={ ({item}) => (
-                        <Appointment
-                            data={item}
-                            onPress={handleAppointmentDetails}
-                        />
-                    )}
-                />
-            </View>
+            <ListHeader
+                title="Partidas Agendadas"
+                subtitle="Total 6"
+            />
+            <FlatList
+                style={styles.matches}
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={{ paddingBottom: 32 }}
+                ItemSeparatorComponent={() => <ListDivider/>}
+                data={appointments}
+                keyExtractor={item => item.id}
+                renderItem={ ({item}) => (
+                    <Appointment
+                        data={item}
+                        onPress={handleAppointmentDetails}
+                    />
+                )}
+            />
         </Background>
     )
 }
