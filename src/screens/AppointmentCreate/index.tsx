@@ -49,7 +49,7 @@ export function AppointmentCreate() {
                     />
                     <Text style={[
                         styles.label,
-                        {marginLeft: 24, marginTop: 32}
+                        {marginLeft: 24, marginTop: 16, marginBottom: 8}
                     ]}> Categoria </Text>
                     <CategorySelect
                         hasCheckBox
@@ -80,7 +80,7 @@ export function AppointmentCreate() {
 
                         <View style={styles.field}>
                             <View>
-                                <Text style={styles.label}>
+                                <Text style={[styles.label, {marginBottom: 8}]}>
                                     Dia e Mês
                                 </Text>
                                 <View style={styles.column}>
@@ -90,7 +90,7 @@ export function AppointmentCreate() {
                                 </View>
                             </View>
                             <View>
-                                <Text style={styles.label}>
+                                <Text style={[styles.label, {marginBottom: 8}]}>
                                     Hora e Minuto
                                 </Text>
                                 <View style={styles.column}>
@@ -102,7 +102,7 @@ export function AppointmentCreate() {
                         </View>
 
                         <View style={styles.field}>
-                            <Text style={styles.label}>
+                            <Text style={[styles.label, {marginBottom: 8}]}>
                                 Descrição
                             </Text>
                             <Text style={styles.description}>

@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
     },
     select: {
         width: '100%',
-        height: 68,
+        height: 64,
         flexDirection: "row",
         borderColor: theme.colors.secondary50,
         borderWidth: 1,
@@ -41,7 +41,7 @@ export const styles = StyleSheet.create({
         width: "100%",
         flexDirection: "row",
         justifyContent: "space-between",
-        marginTop: 30,
+        marginTop: 30
     },
     column: {
         flexDirection: "row",
