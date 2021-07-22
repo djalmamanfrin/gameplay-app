@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
 import {theme} from "../../global/styles/themes";
-import {getBottomSpace} from "react-native-iphone-x-helper";
 
 export const styles = StyleSheet.create({
     container: {
@@ -17,12 +16,12 @@ export const styles = StyleSheet.create({
         color: theme.colors.heading,
         fontFamily: theme.fonts.title700,
         fontSize: 18,
-        marginBottom: 11
+        marginBottom: 4
     },
     type: {
         color: theme.colors.highlight,
         fontFamily: theme.fonts.text400,
         fontSize: 13,
-        marginBottom: 24
+        marginBottom: 12
     }
 });
