@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { getBottomSpace } from "react-native-iphone-x-helper";
 import {theme} from "../../global/styles/themes";
 
 export const styles = StyleSheet.create({
@@ -13,7 +12,7 @@ export const styles = StyleSheet.create({
     },
     form: {
         paddingHorizontal: 24,
-        marginTop: 32
+        marginTop: 24
     },
     select: {
         width: '100%',
@@ -41,7 +40,7 @@ export const styles = StyleSheet.create({
         width: "100%",
         flexDirection: "row",
         justifyContent: "space-between",
-        marginTop: 30
+        marginTop: 24
     },
     column: {
         flexDirection: "row",

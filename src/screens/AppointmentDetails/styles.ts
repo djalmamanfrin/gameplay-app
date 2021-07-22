@@ -11,12 +11,12 @@ export const styles = StyleSheet.create({
     content: {
         flex: 1,
         justifyContent: "flex-end",
-        paddingHorizontal: 24
+        paddingHorizontal: 24,
+        marginBottom: 16
     },
     banner: {
         width: "100%",
-        height: 234,
-        marginBottom: 24
+        height: 234
     },
     title: {
         fontFamily: theme.fonts.title700,
@@ -30,7 +30,8 @@ export const styles = StyleSheet.create({
     },
     members: {
         marginLeft: 24,
-        marginTop: 24
+        marginTop: 16,
+        marginHorizontal: 16
     },
     footer: {
         paddingHorizontal: 24,

@@ -51,8 +51,12 @@ export function AppointmentDetails() {
                 source={BannerImg}
             >
                 <View style={styles.content}>
-                    <Text style={styles.title}> Lendários </Text>
-                    <Text style={styles.subtitle}> Lendários </Text>
+                    <Text style={styles.title}>
+                        Lendários
+                    </Text>
+                    <Text style={styles.subtitle}>
+                        É hoje que vamos chegar ao challenger sem perder uma partida da md10
+                    </Text>
                 </View>
             </ImageBackground>
 
