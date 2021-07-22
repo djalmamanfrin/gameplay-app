@@ -1,11 +1,10 @@
 import React from "react";
-import { Text, View, FlatList } from "react-native";
+import { View, FlatList } from "react-native";
 
-import { Guild } from '../../components/Guild';
+import { Guild, GuildProps } from '../../components/Guild';
 import { ListDivider } from '../../components/ListDivider';
 
 import { styles } from "./styles";
-import { GuildProps } from "../../components/Guild";
 
 type Props = {
     handleGuildSelected: (guild: GuildProps) => void;
@@ -24,14 +23,14 @@ export function Guilds({ handleGuildSelected } : Props) {
             name: 'Murilo Manfrin',
             icon: null,
             owner: true
-        },
+        }
     ]
     return (
         <View style={styles.container}>
             <FlatList
                 data={guilds}
                 keyExtractor={item => item.id}
-                renderItem={ ({ item }) => (
+                renderItem={({item}) => (
                     <Guild
                         data={item}
                         onPress={() => handleGuildSelected(item)}
@@ -39,6 +38,7 @@ export function Guilds({ handleGuildSelected } : Props) {
                 )}
                 ItemSeparatorComponent={() => <ListDivider/>}
                 showsVerticalScrollIndicator={false}
+                contentContainerStyle={{paddingBottom: 16}}
                 style={styles.guilds}
             />
         </View>

@@ -11,8 +11,7 @@ export const styles = StyleSheet.create({
     content: {
         flex: 1,
         justifyContent: "flex-end",
-        paddingHorizontal: 24,
-        marginBottom: 30
+        paddingHorizontal: 24
     },
     banner: {
         width: "100%",
