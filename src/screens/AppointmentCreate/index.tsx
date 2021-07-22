@@ -42,8 +42,8 @@ export function AppointmentCreate() {
             behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
             style={styles.container}
         >
-            <ScrollView>
-                <Background>
+            <Background>
+                <ScrollView>
                     <Header
                         title="Agendar Partida"
                     />
@@ -121,8 +121,8 @@ export function AppointmentCreate() {
                             />
                         </View>
                     </View>
-                </Background>
-            </ScrollView>
+                </ScrollView>
+            </Background>
             <ModalView visible={openModal} close={handleCloseModal}>
                 <Guilds handleGuildSelected={handleSetGuildSelected}/>
             </ModalView>
