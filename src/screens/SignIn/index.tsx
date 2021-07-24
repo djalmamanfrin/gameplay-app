@@ -15,10 +15,10 @@ import  IllustrationImg from '../../assets/illustration.png';
 import { styles } from "./styles";
 
 export function SignIn() {
-    const navegation = useNavigation();
+    const navigation = useNavigation();
     const { user } = useAuth();
     function handleSignIn() {
-        navegation.navigate('Home');
+        navigation.navigate('Home');
     }
 
     return (
