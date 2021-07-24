@@ -44,7 +44,6 @@ export function Home() {
     ]
     function handleCategorySelect(categoryId: string) {
         categoryId === category ? setCategory('') : setCategory(categoryId);
-
     }
     function handleAppointmentDetails() {
         navigation.navigate('AppointmentDetails');

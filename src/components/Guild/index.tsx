@@ -26,7 +26,9 @@ export function Guild({data, ...rest} : Props) {
             activeOpacity={0.7}
             {...rest}
         >
-            <GuildIcon/>
+            <View style={{ marginRight: 16 }}>
+                <GuildIcon/>
+            </View>
             <View style={styles.content}>
                 <View>
                     <Text  style={styles.title}> { data.name } </Text>
