@@ -71,7 +71,7 @@ export function AppointmentDetails() {
                 renderItem={ ({ item }) => (
                     <Member data={item}/>
                 )}
-                ItemSeparatorComponent={() => <ListDivider/>}
+                ItemSeparatorComponent={() => <ListDivider width={'77%'}/>}
                 contentContainerStyle={{ paddingBottom: 16 }}
                 style={styles.members}
             />

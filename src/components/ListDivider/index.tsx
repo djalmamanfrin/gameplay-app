@@ -3,10 +3,14 @@ import { View } from "react-native";
 
 import { styles } from "./styles";
 
-export function ListDivider() {
+type Props = {
+    width: string;
+}
+
+export function ListDivider({ width } : Props) {
     return (
         <View
-            style={styles.container}
+            style={[styles.container, { width: width }]}
         />
     )
 }

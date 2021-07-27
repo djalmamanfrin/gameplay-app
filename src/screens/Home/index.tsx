@@ -75,7 +75,7 @@ export function Home() {
                 style={styles.matches}
                 showsHorizontalScrollIndicator={false}
                 contentContainerStyle={{ paddingBottom: 32 }}
-                ItemSeparatorComponent={() => <ListDivider/>}
+                ItemSeparatorComponent={() => <ListDivider width={'76%'}/>}
                 data={appointments}
                 keyExtractor={item => item.id}
                 renderItem={ ({item}) => (
