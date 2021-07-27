@@ -2,6 +2,7 @@ import React, {createContext, ReactNode, useContext, useState} from "react";
 import * as AuthSession from "expo-auth-session";
 import { DiscordEnv } from "../configs";
 import { api } from "../servers/api";
+const { CDN_IMAGE } = process.env;
 
 
 type User = {
@@ -47,7 +48,7 @@ function AuthProvider({ children } : AuthProviderProps) {
                 api.defaults.headers.authorization = `Bearer ${ params.access_token }`;
                 const userInfo = await api.get('/users/@me');
                 const firstName = userInfo.data.username.split(' ')[0];
-                userInfo.data.avatar = `${ DiscordEnv.CDN_IMGAE }/avatars/${ userInfo.data.id }/${ userInfo.data.avatar }.png`;
+                userInfo.data.avatar = `${ DiscordEnv.CDN_IMAGE }/avatars/${ userInfo.data.id }/${ userInfo.data.avatar }.png`;
                 setUser({
                     ...userInfo.data,
                     firstName,
