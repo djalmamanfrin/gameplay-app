@@ -4,13 +4,12 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { Home } from "../screens/Home";
 import { AppointmentCreate } from "../screens/AppointmentCreate";
 import { AppointmentDetails } from "../screens/AppointmentDetails";
-import { SignIn } from "../screens/SignIn";
 
 const { Navigator, Screen } = createStackNavigator();
 
 import {theme} from "../global/styles/themes";
 
-export function AuthRoutes() {
+export function AppRoutes() {
     return (
         <Navigator
             headerMode="none"
