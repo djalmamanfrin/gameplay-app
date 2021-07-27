@@ -51,11 +51,11 @@ function AuthProvider({ children } : AuthProviderProps) {
                     firstName,
                     token: params.access_token
                 });
-                setLoading(false);
             }
         } catch (e) {
-            setLoading(false);
             throw new Error(e);
+        } finally {
+            setLoading(false);
         }
 
     }
