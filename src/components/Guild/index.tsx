@@ -27,7 +27,7 @@ export function Guild({data, ...rest} : Props) {
             {...rest}
         >
             <View style={{ marginRight: 16 }}>
-                <GuildIcon/>
+                <GuildIcon guildId={data.id} iconId={data.icon}/>
             </View>
             <View style={styles.content}>
                 <View>

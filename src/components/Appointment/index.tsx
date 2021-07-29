@@ -33,7 +33,7 @@ export function Appointment({data, ...rest}: Props) {
         <RectButton {...rest}>
             <View style={styles.container}>
                 <View style={{ marginRight: 16 }}>
-                    <GuildIcon/>
+                    <GuildIcon guildId={data.guild.id} iconId={data.guild.icon}/>
                 </View>
                 <View style={styles.content}>
                     <View style={styles.header}>
